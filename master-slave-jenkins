@@ -40,7 +40,7 @@ step 6: download agent.jar on slave
 sudo curl -sO http://18.141.175.255:8080/jnlpJars/agent.jar
 
 step 7: create a file on slave
-sudo vi agent.sh   ----->copy the script from jenkins dashboad and add space then "&" at last. 
+sudo vi autostart.sh   ----->copy the script from jenkins dashboad and add space then "&" at last. 
 
 java -jar agent.jar -url http://18.141.175.255:8080/ -secret d0d89ba16bfc3adaee6468edabb48c7aa591bcf0a37f2e26ec31ef421c66c2e0 -name "slave-1" -workDir "/home/ec2-user" &
 
@@ -49,10 +49,10 @@ java -jar agent.jar -url http://18.141.175.255:8080/ -secret d0d89ba16bfc3adaee6
 
 
 step8: change the file permission
-sudo chmod 777 agent.sh
+sudo chmod 777 autostart.sh
 
 step 9: run the script
-./agent.sh
+./autostart.sh
 
 
 we should be able to connect 
