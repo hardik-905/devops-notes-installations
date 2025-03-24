@@ -4,17 +4,17 @@ pipeline
     stages {
         stage('Build') {
             steps {
-                echo 'hello1'
+                echo 'hello Hardik'
             }
         }
         stage('Test') {
             steps {
-                sleep 60
+                sleep 10
             }
         }
         stage('Deploy') {
             steps {
-                echo 'hello2'
+                echo 'hello Pune'
             }
         }
     }
